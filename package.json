@@ -1,7 +1,15 @@
 {
   "name": "rclone-plugin-template",
+  "author": "rclone",
   "version": "0.1.0",
   "private": true,
+  "homepage": "./",
+  "rclone": {
+    "handleType": [
+      "video/mp4"
+    ],
+    "pluginType": "FILE_HANDLER"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -10,10 +18,16 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
   },
+  "devDependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "enzyme-to-json": "^3.5.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:cov": "react-scripts test --coverage",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
