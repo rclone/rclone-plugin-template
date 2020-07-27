@@ -154,6 +154,36 @@ The following parameters are passed to the plugin.
 
 Based on this data, your plugin can load relevant files.
 
+#### Inside the App.js
+
+```js
+
+componentDidMount() {
+    let url_string = window.location.href;
+    let url = new URL(url_string);
+    this.setState({
+        loadUrl: url.searchParams.get("loadUrl"),
+        mimeType: url.searchParams.get("mimeType")
+    },()=>{
+        console.log(this.state)
+    } );
+
+}
+
+constructor(props) {
+    super(props);
+    this.state = {
+        loadUrl: "",
+        mimeType: ""
+    }
+}
+```
+
+The rclone webui will call the plugin with the following parameters:
+
+- loadUrl   - This url is a publicly accessible url from rclone.
+- MimeType  - This is the mime type determined by rclone.
+
 ### Dashboard plugins
 
 The dashboard plugins are shown as a widget on the rclone dashboard. The user can customize their tiling according to his
@@ -193,7 +223,7 @@ git push --tags
 ```
 
 
-### Submitting a pull request for rclone store
+### Submitting an issue for rclone store
 
 You can keep your plugin private, or you can submit a request for your plugin to be listed in the official rclone store.
 
