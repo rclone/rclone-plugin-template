@@ -242,3 +242,12 @@ Go to [Plugins Repo (Issues)](https://github.com/rclone/rclone-plugins-repo/issu
             "bugs": "https://github.com/negative0/rclone-video-plugin/issues"
 }
 ```
+
+#### Adding styles
+
+You can add the css inside the App.css file. This file is imported in the App.js file, which would apply the styles to 
+your main component. If you want to add styles to a different component, simply import the styles in that component.
+
+```js
+import './App.css';
+```

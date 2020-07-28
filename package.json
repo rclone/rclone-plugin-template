@@ -1,14 +1,12 @@
 {
-  "name": "rclone-plugin-template",
-  "author": "rclone",
+  "name": "<plugin_name_goes_here>",
+  "author": "<author_name_goes_here>",
   "version": "0.1.0",
   "private": true,
   "homepage": "./",
   "rclone": {
-    "handleType": [
-      "video/mp4"
-    ],
-    "pluginType": "FILE_HANDLER"
+    "handleType": [],
+    "pluginType": "DASHBOARD"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
